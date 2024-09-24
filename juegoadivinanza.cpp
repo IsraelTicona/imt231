@@ -39,5 +39,7 @@ while(no_acerto){
 	}
 cout<<"Finalizo el juego"<<endl;
 cout << "Adivino el numero secreto en "<< intentos << " intentos." << endl;
+cout.precision(2);
+cout << fixed;
 cout << "Su puntuacion fue de "<< puntos << " puntos."<< endl;
 }
