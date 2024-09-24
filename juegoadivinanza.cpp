@@ -8,11 +8,13 @@ cout<<"***************************************"<<endl;
 
 const int numero_secreto = 42;
 int adivina;
+int intentos = 0;
 
 bool no_acerto = true;
 
 while(no_acerto){
-
+	intentos++;
+	cout <<"Tentativa "<< intentos << endl;
 	cout<< "¿cual es el numero? ";
 	cin>>adivina;
 	cout<< "El valor del numero es: " <<adivina<<endl;
@@ -33,4 +35,5 @@ while(no_acerto){
 
 	}
 cout<<"Finalizo el juego"<<endl;
+cout << "Adivino el numero secreto en "<< intentos << " intentos." << endl;
 }
