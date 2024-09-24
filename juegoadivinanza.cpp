@@ -18,7 +18,7 @@ while(no_acerto){
 	cout <<"Tentativa "<< intentos << endl;
 	cout<< "¿cual es el numero? ";
 	cin>>adivina;
-	double puntos_perdidos = abs(adivina - numero_secreto)/2;
+	double puntos_perdidos = abs(adivina - numero_secreto)/2.0;
 	puntos = puntos - puntos_perdidos;
 	cout<< "El valor del numero es: " <<adivina<<endl;
 
