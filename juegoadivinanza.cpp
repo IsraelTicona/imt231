@@ -9,20 +9,28 @@ cout<<"***************************************"<<endl;
 const int numero_secreto = 42;
 int adivina;
 
-cout<< "¿cual es el numero? ";
-cin>>adivina;
-cout<< "El valor del numero es: " <<adivina<<endl;
+bool no_acerto = true;
 
-bool acerto = adivina == numero_secreto;
-bool mayor = adivina > numero_secreto;
+while(no_acerto){
 
-if(acerto){
-	cout << "Felicitaciones!!!...adivino el numero secreto" << endl;
+	cout<< "¿cual es el numero? ";
+	cin>>adivina;
+	cout<< "El valor del numero es: " <<adivina<<endl;
+
+	bool acerto = adivina == numero_secreto;
+	bool mayor = adivina > numero_secreto;
+
+	if(acerto){
+		cout << "Felicitaciones!!!...adivino el numero secreto" << endl;
+		no_acerto = false;
+		}
+	else if(mayor){
+		cout<< "El numero ingresado es mayor que el numero secreto" << endl;
+		}
+	else{
+		cout << "El numero ingresado es menor que el numero secreto" << endl;
+		}
+
 	}
-else if(mayor){
-	cout<< "El numero ingresado es mayor que el numero secreto" << endl;
-	}
-else{
-	cout << "El numero ingresado es menor que el numero secreto" << endl;
-	}
+cout<<"Finalizo el juego"<<endl;
 }
