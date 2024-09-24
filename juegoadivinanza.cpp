@@ -9,6 +9,7 @@ cout<<"***************************************"<<endl;
 const int numero_secreto = 42;
 int adivina;
 int intentos = 0;
+double puntos = 1000.0; //guarda los puntos ganados
 
 bool no_acerto = true;
 
@@ -17,6 +18,8 @@ while(no_acerto){
 	cout <<"Tentativa "<< intentos << endl;
 	cout<< "¿cual es el numero? ";
 	cin>>adivina;
+	double puntos_perdidos = abs(adivina - numero_secreto)/2;
+	puntos = puntos - puntos_perdidos;
 	cout<< "El valor del numero es: " <<adivina<<endl;
 
 	bool acerto = adivina == numero_secreto;
@@ -36,4 +39,5 @@ while(no_acerto){
 	}
 cout<<"Finalizo el juego"<<endl;
 cout << "Adivino el numero secreto en "<< intentos << " intentos." << endl;
+cout << "Su puntuacion fue de "<< puntos << " puntos."<< endl;
 }
