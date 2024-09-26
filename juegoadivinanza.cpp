@@ -1,12 +1,20 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
+
 int main(){
 
 cout<<"**************************************"<<endl;
 cout<<"*Bienvenido al JUEGO de la adivinanza!*"<<endl;
+cout<<"Ingrese un numero del rango: 1 a 100 *"<<endl;
 cout<<"***************************************"<<endl;
 
-const int numero_secreto = 42;
+//Iniciar la semilla para generar numeros aleatorios
+srand(time(0));
+const int numero_secreto = 1 + rand() % 100; //generar numero aleatorio entre 1 y 100
+cout << "Numero secreto aleatorio generado entre 1 y 100: " << numero_secreto << endl;
 int adivina;
 int intentos = 0;
 double puntos = 1000.0; //guarda los puntos ganados
